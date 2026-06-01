@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, inject, signal } from '@angular/core';
+import { ChangeDetectorRef, Component, inject } from '@angular/core';
 
 import { Album } from './models/album.model';
 import { ItunesService } from './services/itunes.service';
@@ -12,8 +12,6 @@ import { ItunesService } from './services/itunes.service';
 export class App {
   private readonly itunesService = inject(ItunesService);
   private readonly changeDetector = inject(ChangeDetectorRef);
-
-  protected readonly title = signal('antra-project');
 
   searchTerm = '';
   searchedArtist = '';
