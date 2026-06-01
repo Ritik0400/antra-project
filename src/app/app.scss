@@ -1,0 +1,179 @@
+.app-header {
+  align-items: center;
+  background: #007a78;
+  display: flex;
+  min-height: 88px;
+  padding: 20px 24px;
+  width: 100%;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 520px;
+  width: 100%;
+}
+
+.search-label {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.search-field {
+  position: relative;
+  width: min(100%, 420px);
+}
+
+.search-input {
+  background: #ffffff;
+  border: 0;
+  border-radius: 20px;
+  color: #1f2933;
+  outline: none;
+  padding: 11px 44px 11px 18px;
+  width: 100%;
+}
+
+.search-input::placeholder {
+  color: #b8c0c7;
+}
+
+.search-input:focus {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.35);
+}
+
+.search-icon {
+  color: #8b969f;
+  font-size: 16px;
+  line-height: 1;
+  pointer-events: none;
+  position: absolute;
+  right: 17px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.main-content {
+  background: #ffffff;
+  min-height: calc(100vh - 88px);
+  padding: 34px 24px 48px;
+}
+
+.results-section {
+  margin: 0 auto;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.results-heading {
+  color: #1f2933;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 0;
+  text-align: center;
+}
+
+.heading-divider {
+  background: #007a78;
+  height: 1px;
+  margin: 16px auto 28px;
+  max-width: 920px;
+  width: 100%;
+}
+
+.status-message {
+  color: #52616d;
+  font-size: 16px;
+  margin: 0 0 24px;
+  text-align: center;
+}
+
+.error-message {
+  color: #b42318;
+}
+
+.album-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+}
+
+.album-card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 218px;
+  text-align: center;
+}
+
+.album-cover {
+  aspect-ratio: 1;
+  background: #eef2f4;
+  display: block;
+  height: 140px;
+  object-fit: cover;
+  width: 140px;
+}
+
+.album-title {
+  color: #1f2933;
+  display: -webkit-box;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 12px 0 0;
+  max-width: 160px;
+  min-height: 39px;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+@media (max-width: 600px) {
+  .app-header {
+    min-height: 76px;
+    padding: 16px;
+  }
+
+  .main-content {
+    min-height: calc(100vh - 76px);
+    padding: 28px 16px 40px;
+  }
+
+  .results-heading {
+    font-size: 22px;
+  }
+
+  .heading-divider {
+    margin-bottom: 24px;
+  }
+
+  .album-grid {
+    gap: 20px 16px;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  }
+
+  .album-card {
+    min-height: 196px;
+  }
+
+  .album-cover {
+    height: 120px;
+    width: 120px;
+  }
+
+  .album-title {
+    font-size: 14px;
+    max-width: 130px;
+  }
+}

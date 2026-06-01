@@ -5,11 +5,11 @@
       <input
         id="artist-search"
         class="search-input"
-        type="search"
+        type="text"
         placeholder="Search..."
         [value]="searchTerm"
         (input)="searchTerm = $any($event.target).value"
-        (keydown.enter)="onSearch()"
+        (keydown.enter)="onSearch($event)"
       />
       <span class="search-icon" aria-hidden="true">&#128269;</span>
     </div>
